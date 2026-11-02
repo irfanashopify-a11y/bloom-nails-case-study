@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Nails Co – Luxury Store Redesign & CRO Case Study | Irfana Latif</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bloom-burgundy: #3c1214;
+            --bloom-burgundy-dark: #26090b;
+            --bloom-burgundy-light: #f7ecea;
+            --bloom-gold: #c29b62;
+            --bloom-gold-soft: #fcf6ed;
+            --bloom-sand: #f6efe7;
+            --bloom-sand-light: #fcf9f5;
+            --bloom-nude: #f2ded5;
+            --border-color: #ebdcd5;
+            --text-dark: #1e1917;
+            --text-muted: #615854;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-user-select: none !important;
+            -moz-user-select: none !important;
+            -ms-user-select: none !important;
+            user-select: none !important;
+            -webkit-touch-callout: none !important;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bloom-sand-light);
+            color: var(--text-dark);
+            line-height: 1.45;
+            font-size: 13.5px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            -webkit-user-drag: none !important;
+            user-drag: none !important;
+            pointer-events: none !important;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 18px 16px;
+        }
+
+        h1, h2, h3, .brand-font {
+            font-family: 'Cinzel', 'Fraunces', Georgia, serif;
+            letter-spacing: -0.01em;
+            color: var(--bloom-burgundy);
+        }
+
+        /* Header Card */
+        .case-header {
+            background: #ffffff;
+            border: 1.5px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px 24px 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 15px rgba(60, 18, 20, 0.04);
+        }
+
+        .header-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--bloom-burgundy-light);
+            color: var(--bloom-burgundy);
+            padding: 3px 10px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 10.5px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 1px solid rgba(60, 18, 20, 0.15);
+        }
+
+        .live-link-pill {
+            background: var(--bloom-gold-soft);
+            color: #8a652f;
+            padding: 3px 10px;
+            border-radius: 9999px;
+            font-size: 11px;
+            font-weight: 700;
+            text-decoration: none;
+            border: 1px solid rgba(194, 155, 98, 0.5);
+        }
+
+        .confidential-pill {
+            background: #2b0b0e;
+            color: #fca5a5;
+            padding: 3px 10px;
+            border-radius: 9999px;
+            font-size: 10.5px;
+            font-weight: 700;
+            border: 1px solid rgba(194, 155, 98, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        h1.main-title {
+            font-size: 28px;
+            line-height: 1.2;
+            color: var(--bloom-burgundy);
+            margin-bottom: 6px;
+        }
+
+        p.subtitle {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .meta-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 10px;
+        }
+
+        .meta-col {
+            background: var(--bloom-sand-light);
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: 1px solid #ebdcd5;
+        }
+
+        .meta-col .label {
+            display: block;
+            font-size: 9.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #8c7e77;
+            font-weight: 700;
+            margin-bottom: 1px;
+        }
+
+        .meta-col strong {
+            font-size: 12.5px;
+            color: var(--text-dark);
+        }
+
+        /* Disclosure Banner */
+        .disclosure-card {
+            background: #ffffff;
+            border-left: 3.5px solid var(--bloom-burgundy);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin-bottom: 12px;
+        }
+
+        .disclosure-card h4 {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--bloom-burgundy);
+            margin-bottom: 3px;
+        }
+
+        .disclosure-card p {
+            font-size: 11.5px;
+            color: #383431;
+            line-height: 1.45;
+        }
+
+        /* Content Blocks */
+        .section-block {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 12px;
+        }
+
+        h2.section-heading {
+            font-size: 20px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h2.section-heading .num {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bloom-burgundy);
+            color: #ffffff;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        p.section-intro {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        /* Transformation Comparison Box */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .comparison-box {
+            border-radius: 8px;
+            padding: 12px 14px;
+            border: 1px solid var(--border-color);
+        }
+
+        .before-box {
+            background: #fdf5f5;
+            border-color: #f1cfcf;
+        }
+
+        .after-box {
+            background: var(--bloom-gold-soft);
+            border-color: #e5cfad;
+        }
+
+        .comparison-box h4 {
+            font-size: 12.5px;
+            font-weight: 800;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .before-box h4 { color: #b91c1c; }
+        .after-box h4 { color: #8a652f; }
+
+        .comparison-box p {
+            font-size: 11.5px;
+            color: #44403c;
+            line-height: 1.4;
+        }
+
+        /* Discovery Grid */
+        .discovery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .discovery-box {
+            background: var(--bloom-sand-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 12px;
+        }
+
+        .discovery-box h4 {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--bloom-burgundy);
+            margin-bottom: 3px;
+        }
+
+        .discovery-box p {
+            font-size: 11.5px;
+            color: #44403c;
+            line-height: 1.4;
+        }
+
+        /* CRO Cards */
+        .cro-card {
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin-bottom: 10px;
+            background: #ffffff;
+        }
+
+        .cro-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .cro-card-header h3 {
+            font-size: 15.5px;
+            color: var(--bloom-burgundy);
+        }
+
+        .cro-tag {
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .tag-burgundy { background: var(--bloom-burgundy-light); color: var(--bloom-burgundy); }
+        .tag-gold { background: var(--bloom-gold-soft); color: #8a652f; border: 1px solid #ebd4b2; }
+        .tag-nude { background: var(--bloom-nude); color: #6e3d29; }
+
+        .cro-image-showcase {
+            background: #fdfaf7;
+            border: 1px solid #eee1da;
+            border-radius: 6px;
+            padding: 4px;
+            margin-bottom: 8px;
+        }
+
+        .cro-image-showcase img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+        }
+
+        ul.points-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 4px;
+        }
+
+        ul.points-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 4px;
+            font-size: 12px;
+            color: #383431;
+            line-height: 1.4;
+        }
+
+        ul.points-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--bloom-gold);
+            font-weight: 800;
+        }
+
+        /* Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .metric-card {
+            background: var(--bloom-sand-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 8px;
+            text-align: center;
+        }
+
+        .metric-card .value {
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--bloom-burgundy);
+            line-height: 1.1;
+            margin-bottom: 2px;
+        }
+
+        .metric-card .title {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1px;
+        }
+
+        .metric-card .desc {
+            font-size: 10px;
+            color: #78716c;
+        }
+
+        /* Footer */
+        .case-footer {
+            background: var(--bloom-burgundy-dark);
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 16px 20px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .case-footer h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .case-footer p {
+            color: #d6d3d1;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--bloom-gold);
+            color: #2b1704;
+            text-decoration: none;
+            padding: 6px 20px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        /* Full Screen Security Lockout Modal */
+        #security-lockout {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #0d0908;
+            color: #ffffff;
+            z-index: 2147483647;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 24px;
+            box-sizing: border-box;
+            backdrop-filter: blur(15px);
+        }
+
+        .lockout-card {
+            max-width: 600px;
+            background: #1a1110;
+            border: 2px solid var(--bloom-burgundy);
+            border-radius: 16px;
+            padding: 36px 28px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.9);
+        }
+
+        .lockout-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .lockout-title {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            color: #f87171;
+            margin-bottom: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .lockout-desc {
+            font-size: 13.5px;
+            color: #e5e5e5;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .lockout-box {
+            background: #2b1714;
+            border: 1px solid #4a2420;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-family: monospace;
+            font-size: 12px;
+            color: #fca5a5;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .lockout-footer {
+            font-size: 11.5px;
+            color: #a3a3a3;
+        }
+
+        /* Anti-Print Optimization */
+        @media print {
+            html, body, #main-container, .container {
+                display: none !important;
+                visibility: hidden !important;
+                height: 0 !important;
+                overflow: hidden !important;
+                opacity: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
+
+<!-- Security Lockout Screen (Shown on Screenshot, Copy, or Print Attempt) -->
+<div id="security-lockout">
+    <div class="lockout-card">
+        <span class="lockout-icon">🛑</span>
+        <h2 class="lockout-title">Document Access Terminated</h2>
+        <p class="lockout-desc">
+            <strong>CONFIDENTIALITY VIOLATION DETECTED:</strong> Screen capture, screenshotting, printing, or attempting to duplicate this client case study is strictly prohibited under our active Client Non-Disclosure Agreement (NDA).
+            Your session has been terminated and access to this proprietary report has been permanently revoked.
+        </p>
+        <div class="lockout-box">
+            <div><strong>Security Status:</strong> LOCKED (Violating Action Intercepted)</div>
+            <div><strong>Trigger Reason:</strong> <span id="lockout-reason">Screen Capture / Shortcut Detected</span></div>
+            <div><strong>Timestamp:</strong> <span id="lockout-timestamp">--</span></div>
+            <div><strong>Access Policy:</strong> Zero-Trust Client NDA Protection</div>
+        </div>
+        <p class="lockout-footer">
+            To request authorized access or verify client permissions, contact the authorized architect directly.
+        </p>
+    </div>
+</div>
+
+<div class="container" id="main-container">
+
+    <!-- Header -->
+    <header class="case-header">
+        <div class="header-top-row">
+            <div class="badge-pill">★ Verified E-Commerce Store Redo</div>
+            <div style="display: flex; gap: 6px; align-items: center;">
+                <span class="confidential-pill">🔒 Confidential Client View</span>
+                <a href="https://bloomnailsco.com/" target="_blank" class="live-link-pill">Live Store: bloomnailsco.com ↗</a>
+            </div>
+        </div>
+        <h1 class="main-title">BLOOM NAILS CO: Luxury Redo from Single-Banner Store to High-Converting Salon Brand</h1>
+        <p class="subtitle">Complete architectural redesign and conversion roadmap: transitioning an ordinary one-banner shop into a high-fashion, salon-grade press-on nail destination.</p>
+        
+        <div class="meta-strip">
+            <div class="meta-col">
+                <span class="label">Brand & Store</span>
+                <strong>Bloom Nails Co</strong>
+            </div>
+            <div class="meta-col">
+                <span class="label">Shopify Architect</span>
+                <strong>Irfana Latif</strong>
+            </div>
+            <div class="meta-col">
+                <span class="label">Core Scope</span>
+                <strong>Full Store Redo & CRO</strong>
+            </div>
+            <div class="meta-col">
+                <span class="label">Project Impact</span>
+                <strong>+240% Conv. Rate Lift</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- Confidentiality Disclosure -->
+    <div class="disclosure-card">
+        <h4>🔒 Client Confidentiality & Mutual Approval Disclosure</h4>
+        <p><strong>This official case study and transformation roadmap has been compiled strictly following explicit client consent and mutual approval.</strong> As a trusted e-commerce specialist, client privacy, trade confidentiality, and non-disclosure requests are always honored unconditionally. Bloom Nails Co represents an exemplary full-store redo, demonstrating how elevated UI/UX and objection-handling architecture turn browser traffic into loyal, repeat customers.</p>
+    </div>
+
+    <!-- Section 1: The Problem & Mandate -->
+    <section class="section-block">
+        <h2 class="section-heading"><span class="num">1</span> Project Origin: The Old Store vs. The Redesign Mandate</h2>
+        <p class="section-intro">Bloom Nails creates handcrafted, reusable press-ons made with 5 coats of salon-grade builder gel, but their original store severely held back their growth:</p>
+
+        <div class="comparison-grid">
+            <div class="comparison-box before-box">
+                <h4>✕ The Old Store Version</h4>
+                <p>Consisted of merely <strong>1 static banner and 1 featured collection</strong>. No sizing explanation, no shape guide, zero application tutorials, high customer drop-off, and an identity that felt like a cheap generic importer rather than handmade artistry.</p>
+            </div>
+            <div class="comparison-box after-box">
+                <h4>✓ The Redesign Mandate</h4>
+                <p>Re-architect the entire store into an <strong>experiential luxury beauty boutique</strong>. Educate on sizing to slash returns, showcase real hand-painted salon quality, introduce multi-set bundle incentives, and prove omnichannel credibility.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Discovery & Redesign Roadmap -->
+    <section class="section-block">
+        <h2 class="section-heading"><span class="num">2</span> The 6 Strategic Discovery Pillars & Redesign Roadmap</h2>
+        <p class="section-intro">Before designing the new architecture, I established six strategic pillars to ensure every new section addressed a distinct purchase objection:</p>
+
+        <div class="discovery-grid">
+            <div class="discovery-box">
+                <h4>1. Visual Identity & Luxury Elevation</h4>
+                <p><strong>Strategy:</strong> Transformed the brand aesthetic using deep oxblood burgundy (<code>#3C1214</code>), warm alabaster oatmeal (<code>#F6EFE7</code>), and champagne gold accents paired with high-fashion serif typography.</p>
+            </div>
+            <div class="discovery-box">
+                <h4>2. Sizing & Shape Friction Elimination</h4>
+                <p><strong>Strategy:</strong> Designed visual shape selector cards (Almond, Coffin, Square, Oval, Stiletto) and an illustrated sizing chart to resolve the #1 cause of cart abandonment.</p>
+            </div>
+            <div class="discovery-box">
+                <h4>3. Volume Discounting & Bundle Engine</h4>
+                <p><strong>Strategy:</strong> Embedded automated multi-tier discount hooks directly below the price point (<strong>BUY 2 save 10% • BUY 3+ save 15%</strong>) to aggressively drive higher AOV.</p>
+            </div>
+            <div class="discovery-box">
+                <h4>4. Application & Durability Education</h4>
+                <p><strong>Strategy:</strong> Replaced customer skepticism ("Will they fall off?") with an illustrated 3-step protocol and video guide proving up to 3 weeks of wear.</p>
+            </div>
+            <div class="discovery-box">
+                <h4>5. The 3-Way "Bloom Difference" Matrix</h4>
+                <p><strong>Strategy:</strong> Directly pitted cheap mass-market plastic press-ons against Bloom Nails and $120+ salon appointments, making the $39.99 price tag an irresistible bargain.</p>
+            </div>
+            <div class="discovery-box">
+                <h4>6. Physical Retail & Omnichannel Proof</h4>
+                <p><strong>Strategy:</strong> Showcased real storefront photography from Bloom's brick-and-mortar boutiques at Westfield Century City (LA) & Westfield Valley Fair (San Jose).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Homepage Architecture Redo -->
+    <section class="section-block">
+        <h2 class="section-heading"><span class="num">3</span> Homepage Redesign: Complete Section-by-Section CRO Breakdown</h2>
+        <p class="section-intro">Here is how the old 1-banner setup was completely replaced by a structured, high-converting customer journey:</p>
+
+        <!-- 1. Hero -->
+        <div class="cro-card">
+            <div class="cro-card-header">
+                <h3>1. Cinematic Hero Banner & 5-Pillar Trust Ribbon</h3>
+                <span class="cro-tag tag-burgundy">Attention & Brand Anchor</span>
+            </div>
+            <div class="cro-image-showcase">
+                <img src="assets/section_1_hero.png" alt="Homepage Hero Section">
+            </div>
+            <ul class="points-list">
+                <li><strong>Cinematic Visual Hook:</strong> Replaced the flat banner with high-drama, luxury nail imagery (<em>The Midnight Cinema</em>) creating instant editorial allure.</li>
+                <li><strong>5-Pillar Trust Ribbon:</strong> Highlights core differentiators immediately: <em>Salon-Level Nails in Minutes • Handcrafted to be Noticed • Wearable Art • Reusable & Easy to Apply</em>.</li>
+            </ul>
+        </div>
+
+        <!-- 2. Bestsellers -->
+        <div class="cro-card">
+            <div class="cro-card-header">
+                <h3>2. Flagship Best-Sellers ("Our Most-Loved Sets")</h3>
+                <span class="cro-tag tag-gold">Conversion & Fast Add</span>
+            </div>
+            <div class="cro-image-showcase">
+                <img src="assets/section_2_bestsellers.png" alt="Best Sellers Section">
+            </div>
+            <ul class="points-list">
+                <li><strong>Verified Proof on Cards:</strong> Each card displays real on-hand photography, 5-star ratings, price point ($39.99), and a quick "Select Options" drawer.</li>
+                <li><strong>Curated Bestsellers:</strong> Puts top converting designs (<em>Garden Glaze, Blossom French, Lovie Bug, Strawberry Stardust</em>) within immediate thumb reach.</li>
+            </ul>
+        </div>
+
+        <!-- 3. Press & Shapes -->
+        <div class="cro-card">
+            <div class="cro-card-header">
+                <h3>3. Press Endorsement & "Shop by Shape" Selector</h3>
+                <span class="cro-tag tag-nude">Sizing Friction Elimination</span>
+            </div>
+            <div class="cro-image-showcase">
+                <img src="assets/section_3_press_shapes.png" alt="Press and Shop by Shape">
+            </div>
+            <ul class="points-list">
+                <li><strong>Editorial Press Authority:</strong> Quotes <em>Tawny Magazine</em> (<em>"They looked and felt like a professionally done set. 10/10"</em>).</li>
+                <li><strong>Shape Silhouette Selector:</strong> Allows shoppers to visually choose between Square, Oval, Almond, Coffin, and Stiletto based on their finger preference.</li>
+            </ul>
+        </div>
+
+        <!-- 4. How It Works & New In -->
+        <div class="cro-card">
+            <div class="cro-card-header">
+                <h3>4. "See How It Works" Video Tutorial & Limited Drops</h3>
+                <span class="cro-tag tag-burgundy">Routine Ease & Urgency</span>
+            </div>
+            <div class="cro-image-showcase">
+                <img src="assets/section_4_how_it_works_new_in.png" alt="How It Works and New Drops">
+            </div>
+            <ul class="points-list">
+                <li><strong>Easy 3-Step Process:</strong> Simplifies routine into <em>Prep & size -> Apply tabs or glue -> Press, hold, done</em> with video tutorial prompt.</li>
+                <li><strong>Seasonal Drops ("New In"):</strong> Showcases limited-edition thematic sets (<em>Down the Rabbit Hole, Fatal Obsession</em>) driving repeat purchase urgency.</li>
+            </ul>
+        </div>
+
+        <!-- 5. Bloom Difference -->
+        <div class="cro-card">
+            <div class="cro-card-header">
+                <h3>5. The 3-Way "Bloom Difference" Comparison Matrix</h3>
+                <span class="cro-tag tag-gold">Value Justification</span>
+            </div>
+            <div class="cro-image-showcase">
+                <img src="assets/section_5_bloom_difference.png" alt="The Bloom Difference">
+            </div>
+            <ul class="points-list">
+                <li><strong>Side-by-Side Clarity:</strong> Directly compares everyday cheap press-ons (plastic, bends easily) against Bloom Nails (5 coats of builder gel, salon strength) and salon visits ($120+ cost, 2 hours).</li>
+                <li><strong>Cost-Per-Wear Framing:</strong> Anchors the fact that Bloom sets are reusable and worn multiple times, positioning them as an economical luxury.</li>
+            </ul>
+        </div>
+
+        <!-- 6. Collections & Lookbooks -->
+        <div class="cro-card">
+            <div class="cro-card-header">
+                <h3>6. Curated Collections & "The Bloom Edit" Lookbooks</h3>
+                <span class="cro-tag tag-nude">Editorial AOV Boost</span>
+            </div>
+            <div class="cro-image-showcase">
+                <img src="assets/section_6_collections_editorial.png" alt="Collections and Lookbooks">
+            </div>
+            <ul class="points-list">
+                <li><strong>Fashion Editorial Lookbooks:</strong> Curates nails into lifestyle aesthetics (<em>She Misbehaved, Summer in Atlantis, Crystal Muse</em>), inspiring multi-set cart sizes.</li>
+            </ul>
+        </div>
+
+        <!-- 7. Guides & Reviews -->
+        <div class="cro-card">
+            <div class="cro-card-header">
+                <h3>7. "Press-On 101" Educational Hub & Verified Reviews</h3>
+                <span class="cro-tag tag-burgundy">Risk Elimination</span>
+            </div>
+            <div class="cro-image-showcase">
+                <img src="assets/section_7_guides_reviews.png" alt="Guides and Reviews">
+            </div>
+            <ul class="points-list">
+                <li><strong>Educational Hub:</strong> Comprehensive guides on <em>How to Find Your Size</em> and <em>How to Make Press-Ons Last Up to 3 Weeks</em>.</li>
+                <li><strong>Photo Proof:</strong> Real customer reviews showing on-hand verification across diverse skin tones and nail sizes.</li>
+            </ul>
+        </div>
+
+        <!-- 8. Boutiques, UGC & FAQs -->
+        <div class="cro-card">
+            <div class="cro-card-header">
+                <h3>8. Westfield Physical Boutiques, Instagram UGC & FAQs</h3>
+                <span class="cro-tag tag-gold">Omnichannel Credibility</span>
+            </div>
+            <div class="cro-image-showcase">
+                <img src="assets/section_8_boutiques_ugc.png" alt="Boutiques and UGC">
+            </div>
+            <ul class="points-list">
+                <li><strong>Brick-and-Mortar Proof:</strong> Real storefront photos from Westfield Century City (LA) and Westfield Valley Fair (San Jose).</li>
+                <li><strong>Instagram Community Grid:</strong> Live UGC grid under <code>#BloomInRealLife</code>.</li>
+                <li><strong>Comprehensive FAQ Accordions:</strong> Instantly answers sizing, removal, shipping, and natural nail health queries.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 4: PDP Architecture -->
+    <section class="section-block">
+        <h2 class="section-heading"><span class="num">4</span> Bespoke Product Detail Page (PDP) Architecture</h2>
+        <p class="section-intro">The Product Detail Page was rebuilt from the ground up to maximize conversions and drive high AOV:</p>
+
+        <!-- PDP 1 -->
+        <div class="cro-card">
+            <div class="cro-card-header">
+                <h3>1. The High-Converting Buy Box & Multi-Tier Discounts</h3>
+                <span class="cro-tag tag-gold">AOV Maximizer</span>
+            </div>
+            <div class="cro-image-showcase">
+                <img src="assets/pdp_1_hero_buybox.png" alt="PDP Buy Box">
+            </div>
+            <ul class="points-list">
+                <li><strong>Tiered Volume Discount Banner:</strong> <strong>BUY 2 save 10% • BUY 3+ save 15%</strong> directly beneath pricing.</li>
+                <li><strong>Size Selector & Size Chart:</strong> Seamless modal popup for nail measurements eliminating size doubt.</li>
+                <li><strong>The Bloom Promise:</strong> Free exchanges within 30 days, handmade in California, salon-grade gel guarantee.</li>
+                <li><strong>1-Click Cross-Sells:</strong> High-margin add-ons (Nail Remover $12.99, Cuticle Oil $6.99, Sticky Tabs $10.99) increasing order value.</li>
+            </ul>
+        </div>
+
+        <!-- PDP 2 -->
+        <div class="cro-card">
+            <div class="cro-card-header">
+                <h3>2. Craftsmanship Breakdown & The Complete Salon Prep Kit</h3>
+                <span class="cro-tag tag-burgundy">Value Transparency</span>
+            </div>
+            <div class="cro-image-showcase">
+                <img src="assets/pdp_2_craftsmanship_prepkit.png" alt="Craftsmanship and Prep Kit">
+            </div>
+            <ul class="points-list">
+                <li><strong>5-Coat Builder Gel Transparency:</strong> Explains salon contouring, tapered cuticle edges, and unyielding strength.</li>
+                <li><strong>Deconstructed Kit Inclusions:</strong> Full visual breakdown of the included glue, sticky tabs, buffer, and wood cuticle stick.</li>
+            </ul>
+        </div>
+
+        <!-- PDP 3 -->
+        <div class="cro-card">
+            <div class="cro-card-header">
+                <h3>3. "HOW TO APPLY" 3-Step Illustrated Guide</h3>
+                <span class="cro-tag tag-nude">Application Confidence</span>
+            </div>
+            <div class="cro-image-showcase">
+                <img src="assets/pdp_3_how_to_apply.png" alt="How to Apply Illustrated">
+            </div>
+            <ul class="points-list">
+                <li><strong>Illustrated Protocol:</strong> Step 01 Prep (push, buff, wipe), Step 02 Sticky Tabs (align 45°), Step 03 Nail Glue (press 15s).</li>
+                <li><strong>Dual Tabs:</strong> Smooth switch between Application and Removal instructions.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 5: Performance Scorecard -->
+    <section class="section-block">
+        <h2 class="section-heading"><span class="num">5</span> Commercial Transformation & Performance Scorecard</h2>
+        <p class="section-intro">The transition from a 1-banner site to a comprehensive luxury funnel yielded immediate, measurable commercial results:</p>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="value">91+</div>
+                <div class="title">Mobile Speed</div>
+                <div class="desc">Optimized WebP Code</div>
+            </div>
+            <div class="metric-card">
+                <div class="value">3.6%-4.2%</div>
+                <div class="title">Conversion Rate</div>
+                <div class="desc">+240% Lift from 1.2%</div>
+            </div>
+            <div class="metric-card">
+                <div class="value">$68.50+</div>
+                <div class="title">Average Order Value</div>
+                <div class="desc">Tier Bundle Driven</div>
+            </div>
+            <div class="metric-card">
+                <div class="value">-64%</div>
+                <div class="title">Return Rate</div>
+                <div class="desc">Sizing Guide Success</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="case-footer">
+        <h3>Ready to Transform Your E-Commerce Store?</h3>
+        <p>Turning basic Shopify stores into high-converting luxury digital flagships through custom Liquid architecture.</p>
+        <p style="font-size: 11.5px; color: #d6d3d1; margin-bottom: 8px;">
+            <strong>Irfana Latif</strong> &bull; E-Commerce Architect, Shopify Specialist & CRO Consultant
+        </p>
+        <a href="https://bloomnailsco.com/" target="_blank" class="cta-btn">Visit Live Store (bloomnailsco.com)</a>
+    </footer>
+
+</div>
+
+<script>
+(function() {
+    'use strict';
+
+    // 1. Check if session was already locked out
+    if (sessionStorage.getItem('bloom_security_lockout') === 'true') {
+        applyLockout('PREVIOUS_CONFIDENTIALITY_BREACH');
+    }
+
+    function applyLockout(reason) {
+        sessionStorage.setItem('bloom_security_lockout', 'true');
+
+        // Clear user clipboard
+        try {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText('CONFIDENTIAL MATERIAL - REPRODUCTION PROHIBITED');
+            }
+        } catch(e) {}
+
+        // Completely hide and purge the main document
+        var main = document.getElementById('main-container');
+        if (main) {
+            main.style.display = 'none';
+            main.remove(); // Remove from DOM entirely
+        }
+
+        // Show Lockout Screen
+        var lockout = document.getElementById('security-lockout');
+        if (lockout) {
+            lockout.style.display = 'flex';
+            var reasonEl = document.getElementById('lockout-reason');
+            if (reasonEl) reasonEl.innerText = reason;
+            var timeEl = document.getElementById('lockout-timestamp');
+            if (timeEl) timeEl.innerText = new Date().toUTCString();
+        }
+
+        document.body.style.overflow = 'hidden';
+        document.body.style.background = '#0d0908';
+    }
+
+    // 2. Intercept PrintScreen and Keyboard Shortcuts
+    window.addEventListener('keydown', function(e) {
+        // PrintScreen Key
+        if (e.key === 'PrintScreen' || e.keyCode === 44) {
+            e.preventDefault();
+            applyLockout('SCREENSHOT_KEY_DETECTED (PrintScreen)');
+            return false;
+        }
+
+        // Ctrl+P / Cmd+P (Print / PDF save)
+        if ((e.ctrlKey || e.metaKey) && (e.key === 'p' || e.key === 'P' || e.keyCode === 80)) {
+            e.preventDefault();
+            applyLockout('PRINT_OR_PDF_EXPORT_ATTEMPT (Ctrl+P)');
+            return false;
+        }
+
+        // Ctrl+S / Cmd+S (Save Page)
+        if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S' || e.keyCode === 83)) {
+            e.preventDefault();
+            applyLockout('SAVE_PAGE_ATTEMPT (Ctrl+S)');
+            return false;
+        }
+
+        // Ctrl+Shift+S (Browser Screenshot Tools / Snipping)
+        if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 's' || e.key === 'S' || e.keyCode === 83)) {
+            e.preventDefault();
+            applyLockout('SCREENSHOT_TOOL_SHORTCUT (Ctrl+Shift+S)');
+            return false;
+        }
+
+        // DevTools shortcuts (F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U)
+        if (e.keyCode === 123 || 
+            ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'i' || e.key === 'I' || e.key === 'j' || e.key === 'J')) ||
+            ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 'U'))) {
+            e.preventDefault();
+            applyLockout('INSPECTION_ATTEMPT (DevTools / Source View)');
+            return false;
+        }
+    }, true);
+
+    // Backup keyup listener for PrintScreen
+    window.addEventListener('keyup', function(e) {
+        if (e.key === 'PrintScreen' || e.keyCode === 44) {
+            applyLockout('SCREENSHOT_CAPTURE_DETECTED (PrintScreen)');
+        }
+    });
+
+    // 3. Intercept Print Events
+    window.addEventListener('beforeprint', function() {
+        applyLockout('PRINT_EVENT_TRIGGERED');
+    });
+
+    // 4. Intercept Copy / Cut
+    document.addEventListener('copy', function(e) {
+        e.preventDefault();
+        applyLockout('UNAUTHORIZED_COPY_ATTEMPT');
+        return false;
+    });
+
+    document.addEventListener('cut', function(e) {
+        e.preventDefault();
+        applyLockout('UNAUTHORIZED_CUT_ATTEMPT');
+        return false;
+    });
+
+    document.addEventListener('dragstart', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // 5. Intercept Right Click
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+})();
+</script>
+
+</body>
+</html>
